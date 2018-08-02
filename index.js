@@ -57,7 +57,10 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  // remove the specified item from the cart if it exists
+  cart = getCart();
+  
+  
 }
 
 function placeOrder(cardNumber) {
