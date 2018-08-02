@@ -27,29 +27,33 @@ function viewCart() {
   // return the contents of the cart
   
   const cart = getCart();
-  console.log(cart);
   let contents = (cart.length ===0 ? "Your shopping cart is empty." :
     "In your cart, you have ");
     
   for (let i=0; i < cart.length; i++) {
     contents += `${cart[i].itemName} at \$${cart[i].itemPrice}`;
     
-    if (i === cart.length - 1) contents += ".";
-    
+    if (i === cart.length - 1) {
+      contents += ".";
+    }
     else {
       contents += ", ";
       if (i >= cart.length - 2) contents += "and ";
     }
-    
-    console.log(contents);
-    
   }
     
   return contents;
 }
 
 function total() {
-  // write your code here
+  // function to return the total value of the items in the cart
+  const cart = getCart();
+  let total = 0;
+  
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].itemPrice;
+  }
+  return total;
 }
 
 function removeFromCart(item) {
@@ -59,5 +63,3 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
-
-addToCart("apples");
