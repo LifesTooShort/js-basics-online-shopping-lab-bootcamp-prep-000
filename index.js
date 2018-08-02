@@ -33,11 +33,15 @@ function viewCart() {
     
   for (let i=0; i < cart.length; i++) {
     contents += `${cart[i].itemName} at \$${cart[i].itemPrice}`;
-    if (i === cart.length - 1) contents += ".";
-    else if (i === cart.length - 2) contents += ", and ";
-    else contents += ", ";
     
-    console.log(cart);
+    if (i === cart.length - 1) contents += ".";
+    
+    else {
+      contents += ", ";
+      if (i >= cart.length - 2) contents += "and ";
+    }
+    
+    console.log(contents);
     
   }
     
