@@ -75,7 +75,7 @@ function placeOrder(cardNumber) {
   cart = getCart();
   let returnString = "";
   
-  if (cardNumber === null) {
+  if (cardNumber === undefined) {
     returnString =  "Sorry, we don't have a credit card on file for you.";
   }
   else {
