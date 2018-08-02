@@ -27,8 +27,19 @@ function viewCart() {
   // return the contents of the cart
   
   const cart = getCart();
+  console.log(cart);
   let contents = (cart.length ===0 ? "Your shopping cart is empty." :
     "In your cart, you have");
+    
+  for (let i=0; i < cart.length; i++) {
+    contents += `${cart[i].itemName} at \$${cart[i].itemPrice}`;
+    if (i === cart.length - 1) contents += ".";
+    else if (i === cart.length - 2) contents += ", and ";
+    else contents += ", ";
+    
+    console.log(cart);
+    
+  }
     
   return contents;
 }
