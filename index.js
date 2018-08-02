@@ -11,7 +11,7 @@ function setCart(c) {
 
 function addToCart(item) {
  // function to add a new item to the shopping cart
- cart 
+ cart = {item};
 }
 
 function viewCart() {
