@@ -18,9 +18,9 @@ function getRandomInt(min, max) {
 function addToCart(item) {
  // function to add a new item object to the shopping cart
 
- let newItem = {};
- newItem.itemName = item;
- newItem.itemPrice = getRandomInt(1, 100);
+ let newItem = {itemName: item, itemPrice: getRandomInt(1, 100) };
+ /*newItem.itemName = item;
+ newItem.itemPrice = getRandomInt(1, 100);*/
  
  getCart().push(newItem);
  
