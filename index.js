@@ -16,10 +16,10 @@ function getRandomInt(min, max) {
 }
 
 function addToCart(item) {
- // function to add a new item to the shopping cart
+ // function to add a new item object to the shopping cart
  var newItem = {};
  newItem.itemName = item;
- newItem.price = Math.random();
+ newItem.price = getRandomInt(1, 100);
  console.log(newItem);
  
  cart = getCart();
