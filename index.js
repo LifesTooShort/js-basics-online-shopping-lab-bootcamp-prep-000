@@ -60,7 +60,12 @@ function removeFromCart(item) {
   // remove the specified item from the cart if it exists
   cart = getCart();
   
-  
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].itemName == item) {
+      cart.splice(i, 1);
+    }
+  }
+  return (cart);
 }
 
 function placeOrder(cardNumber) {
