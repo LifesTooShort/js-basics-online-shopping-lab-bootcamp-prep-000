@@ -11,9 +11,14 @@ function setCart(c) {
 
 function addToCart(item) {
  // function to add a new item to the shopping cart
+ var newItem = {};
+ newItem.name = item;
+ newItem.price = Math.random();
+ console.log(newItem);
+ 
  cart = getCart();
  
- cart.push(item);
+ cart.push(newItem);
 }
 
 function viewCart() {
