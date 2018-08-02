@@ -59,13 +59,15 @@ function total() {
 function removeFromCart(item) {
   // remove the specified item from the cart if it exists
   cart = getCart();
+  let removed = false;
   
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName == item) {
       cart.splice(i, 1);
+      removed = true;
     }
   }
-  return (cart);
+  return (removed ? cart : "That item is not in your cart.");
 }
 
 function placeOrder(cardNumber) {
