@@ -18,14 +18,19 @@ function getRandomInt(min, max) {
 function addToCart(item) {
  // function to add a new item object to the shopping cart
 
- //let newItem = {itemName: item, itemPrice: getRandomInt(1, 100) };
  getCart().push({itemName: item, itemPrice: getRandomInt(1, 100) });
  
  return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  // return the contents of the cart
+  
+  const cart = getCart();
+  let contents = (cart.length ===0 ? "Your shopping cart is empty." :
+    "In your cart, you have");
+    
+  return contents;
 }
 
 function total() {
