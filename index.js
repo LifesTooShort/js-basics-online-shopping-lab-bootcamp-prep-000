@@ -21,7 +21,7 @@ function addToCart(item) {
   
  var newItem = {};
  newItem.itemName = item;
- newItem.price = getRandomInt(1, 100);
+ newItem.itemPrice = getRandomInt(1, 100);
  console.log(cart, newItem);
  
  cart.push(newItem);
