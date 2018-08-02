@@ -71,5 +71,10 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  // Empty cart and process order
+  cart = getCart();
+  
+  if (cardNumber.null) {
+    return ""
+  }
 }
