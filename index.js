@@ -17,14 +17,17 @@ function getRandomInt(min, max) {
 
 function addToCart(item) {
  // function to add a new item object to the shopping cart
+ cart = getCart();
+  
  var newItem = {};
  newItem.itemName = item;
  newItem.price = getRandomInt(1, 100);
- console.log(newItem);
+ console.log(cart, newItem);
  
- cart = getCart();
+
  
  cart.push(newItem);
+ console.log(cart);
 }
 
 function viewCart() {
