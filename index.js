@@ -72,6 +72,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // Empty cart and process order
+  
   cart = getCart();
   let returnString = "";
   
