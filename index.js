@@ -24,10 +24,10 @@ function addToCart(item) {
  newItem.price = getRandomInt(1, 100);
  console.log(cart, newItem);
  
-
- 
  cart.push(newItem);
  console.log(cart);
+ 
+ 
 }
 
 function viewCart() {
