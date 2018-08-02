@@ -29,7 +29,7 @@ function viewCart() {
   const cart = getCart();
   console.log(cart);
   let contents = (cart.length ===0 ? "Your shopping cart is empty." :
-    "In your cart, you have");
+    "In your cart, you have ");
     
   for (let i=0; i < cart.length; i++) {
     contents += `${cart[i].itemName} at \$${cart[i].itemPrice}`;
