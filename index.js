@@ -9,6 +9,12 @@ function setCart(c) {
   return cart;
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
 function addToCart(item) {
  // function to add a new item to the shopping cart
  var newItem = {};
